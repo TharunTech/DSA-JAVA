@@ -31,6 +31,26 @@ public class LinkedList {
 
 	}
 
+	public void addFirst(int data) {
+		// TODO Auto-generated method stub
+		Node newNode = new Node(data);
+		newNode.next = head;//1st link has address of previous first element, head is the address
+		head = newNode;
+	}
+
+	public void delete(int data) {
+		// TODO Auto-generated method stub
+		Node current = head;
+		while(current.next!=null && current.next.data!=data) {
+			current = current.next;
+		}
+		
+		if(current.next!=null) {
+			current.next = current.next.next;
+		}
+		
+	}
+
 }
 
 class Node{//will have data and address
