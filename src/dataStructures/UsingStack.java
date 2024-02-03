@@ -11,7 +11,14 @@ public class UsingStack {
 			nums.push(30);
 			nums.push(40);
 			nums.push(30);
-			nums.push(20);
+			//nums.push(20);
+			System.out.println(nums);
+			
+			
+			
+			System.out.println(nums.pop());
+			System.out.println(nums.peak());
+			
 			System.out.println(nums);
 
 	}

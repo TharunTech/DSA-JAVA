@@ -3,12 +3,11 @@ package dataStructures;
 public class Stack{
 
 	private int arr[]= new int[5];
-	int top;
+	int top = -1;
 	int size;
 	
 	public Stack() {
 		size = arr.length;
-		top = -1;
 	}
 	public void push(int data) throws Exception {
 		
@@ -25,13 +24,32 @@ public class Stack{
 	public String toString() {
 		
 		String a = "[";
-		for(int i: arr) {
-			a = a+" "+i;
+		for(int i=0;i<=top;i++) {
+			a = a+" "+arr[i];
 		}
 		a= a+" ]";
 		
 		return a;
 
+	}
+	public int pop() {
+		// TODO Auto-generated method stub
+		if(top>-1)
+			return arr[top--];
+		else
+			System.out.println("Stack underflow");
+		
+		return 0;
+		
+	}
+	public int peak() {
+		// TODO Auto-generated method stub
+		if(top>-1)
+			return arr[top];
+		else
+			System.out.println("Stack underflow");
+		return 0;
+		
 	}
 
 }
