@@ -15,6 +15,7 @@ public class Main {
 		
 		tree.inorder();
 		tree.preorder();
+		tree.postorder();
 		
 	}
 }

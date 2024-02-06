@@ -47,6 +47,14 @@ public class BinaryTree {
 		
 		
 	}
+	
+	public void postorder() {
+		System.out.println("Binary Search Tree postOrder Transversal : ");
+		postorderRec(root);
+		System.out.println("");
+		
+		
+	}
 
 	public void inorderRec(Node root) {
 		if(root!=null) {
@@ -61,6 +69,14 @@ public class BinaryTree {
 			System.out.print(root.data +" ");
 			inorderRec(root.left);
 			inorderRec(root.right);
+		}
+	}
+	
+	public void postorderRec(Node root) {
+		if(root!=null) {
+			inorderRec(root.left);
+			inorderRec(root.right);
+			System.out.print(root.data +" ");
 		}
 	}
 }
